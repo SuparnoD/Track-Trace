@@ -1,0 +1,18 @@
+﻿<Window x:Class="OOSD.PeopleContacts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOSD"
+        mc:Ignorable="d"
+        Title="PeopleContacts" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="goBackBtn" Content="Go Back" HorizontalAlignment="Left" Margin="10,378,0,0" VerticalAlignment="Top" Width="92" Height="32" Click="goBackBtn_Click"/>
+        <Label x:Name="personLabel" Content="Person" HorizontalAlignment="Left" Margin="36,69,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="peopeListBox" HorizontalAlignment="Left" Height="186" Margin="132,69,0,0" VerticalAlignment="Top" Width="176"/>
+        <Label x:Name="dateLabel" Content="Date" HorizontalAlignment="Left" Margin="36,281,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="dateTextBox" HorizontalAlignment="Left" Height="23" Margin="132,293,0,0" TextWrapping="Wrap" Text="DD/MM/YYYY HH:MM" VerticalAlignment="Top" Width="176"/>
+        <Button x:Name="submitBtn" Content="Submit" HorizontalAlignment="Left" Margin="338,293,0,0" VerticalAlignment="Top" Width="79" Height="38" Click="submitBtn_Click"/>
+        <ListBox x:Name="peopleListBox2" HorizontalAlignment="Left" Height="262" Margin="507,69,0,0" VerticalAlignment="Top" Width="229"/>
+    </Grid>
+</Window>

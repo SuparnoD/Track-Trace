@@ -1,0 +1,19 @@
+﻿<Window x:Class="OOSD.Database"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOSD"
+        mc:Ignorable="d"
+        Title="Database" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="peopleListBox" HorizontalAlignment="Left" Height="259" VerticalAlignment="Top" Width="220" Margin="86,72,0,0" SelectionChanged="peopleListBox_SelectionChanged"/>
+        <ListBox x:Name="locListBox" HorizontalAlignment="Left" Height="259" VerticalAlignment="Top" Width="220" Margin="524,72,0,0"/>
+        <Button x:Name="goBackBtn" Content="Go Back" HorizontalAlignment="Left" Margin="10,378,0,0" VerticalAlignment="Top" Width="92" Height="32" Click="goBackBtn_Click"/>
+        <Label x:Name="peopleListLabel" Content="List of Individuals" HorizontalAlignment="Left" Margin="86,41,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="locListLabek" Content="List of Locations" HorizontalAlignment="Left" Margin="524,41,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="locVisitBtn" Content="Location Visits" HorizontalAlignment="Left" Margin="658,378,0,0" VerticalAlignment="Top" Width="110" Height="35" Click="locVisitBtn_Click"/>
+        <Button x:Name="peopleContactBtn" Content="People Contacts" HorizontalAlignment="Left" Margin="515,378,0,0" VerticalAlignment="Top" Width="110" Height="35" Click="peopleContactBtn_Click"/>
+
+    </Grid>
+</Window>
