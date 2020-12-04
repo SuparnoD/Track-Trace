@@ -10,6 +10,11 @@ using System;
 namespace OOSD
 {
     [Serializable()]
+    /*
+    * Inherits from Record:
+    * Person - allows the access of type Person (which holds an ID, name and phone number)
+    * Date - the date & time of a particular incident 
+    */
     public class VisitRecord : Record
     {
         private Location location;
