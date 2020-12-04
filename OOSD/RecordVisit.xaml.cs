@@ -1,16 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace OOSD
 {
@@ -23,12 +12,12 @@ namespace OOSD
         {
             InitializeComponent();
 
-            foreach(Person person in DataAccess.listOfPeople)
+            foreach (Person person in DataAccess.listOfPeople)
             {
                 peopleListBox.Items.Add(person);
             }
 
-            foreach(Location location in DataAccess.listOfLocations)
+            foreach (Location location in DataAccess.listOfLocations)
             {
                 locListBox.Items.Add(location);
             }
@@ -57,11 +46,13 @@ namespace OOSD
                     DataAccess.listOfVisits.Add(visitRec);
 
                     MessageBox.Show(visitRec.Person.Name + " visited " + visitRec.Location.Name + " on " + date);
-                } catch
+                }
+                catch
                 {
                     MessageBox.Show("Error! Please ensure all fields are correctly entered/selected");
                 }
-            } else
+            }
+            else
             {
                 MessageBox.Show("Error! Please ensure the date is entered in DD/MM/YYYY HH:MM");
             }

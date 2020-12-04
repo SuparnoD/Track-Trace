@@ -1,16 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace OOSD
 {
@@ -35,7 +24,7 @@ namespace OOSD
             DateTime date;
 
             // Checks if the date is entered in the correct format - DD:MM:YYY
-            if (DateTime.TryParse(dateTxtBox.Text, out date))   
+            if (DateTime.TryParse(dateTxtBox.Text, out date))
             {
                 // Prevents program from crashing incase the user did not enter or select the fields properly
                 try
@@ -66,7 +55,8 @@ namespace OOSD
                 {
                     MessageBox.Show("Error! Please ensure all fields are correctly entered/selected");
                 }
-            } else
+            }
+            else
             {
                 MessageBox.Show("Error! Please ensure the date is entered in DD/MM/YYYY HH:MM");
             }

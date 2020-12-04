@@ -1,15 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+ * AUTHOR: Suparno Deb
+ * DATE LAST MODIFIED: 03/12/2020
+ * FULL NAME: Record.cs
+ * PURPOSE: Acts as a base class for any class dealing with holding records
+ * LAYER: Business
+ */
+using System;
 
 namespace OOSD
 {
-    class Record
+    public class Record
     {
         private Person person;
-        private DateTime date;
+        private DateTime date;      //DateTime is a structure that holds date & time
 
         public Record(Person person, DateTime date)
         {
@@ -22,12 +25,14 @@ namespace OOSD
 
         }
 
+        // PROPERTY: Allows the access of type Person (which holds an ID, name and phone number)
         public Person Person
         {
             get { return person; }
             set { person = value; }
         }
 
+        // PROPERTY: The date of a particular incident
         public DateTime Date
         {
             get { return date; }

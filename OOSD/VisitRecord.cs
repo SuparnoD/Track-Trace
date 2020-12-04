@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+ * AUTHOR: Suparno Deb
+ * DATE LAST MODIFIED: 03/12/2020
+ * FULL NAME: VisitRecord.cs
+ * PURPOSE: Acts as a constructor for VisitRecord which is used to hold informations when an individual visits a particular location
+ * LAYER: Business
+ */
+using System;
 
 namespace OOSD
 {
-    class VisitRecord : Record
+    [Serializable()]
+    public class VisitRecord : Record
     {
         private Location location;
 
@@ -20,6 +24,7 @@ namespace OOSD
 
         }
 
+        // PROPERTY: Allows the access of type Location (which holds the location type and name)
         public Location Location
         {
             get { return location; }

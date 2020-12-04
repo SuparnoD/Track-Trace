@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace OOSD
 {
@@ -38,14 +27,16 @@ namespace OOSD
             if ((string.IsNullOrWhiteSpace(foreNameTxt.Text)) || (string.IsNullOrWhiteSpace(surNameTxt.Text)) || (string.IsNullOrWhiteSpace(numberTxt.Text)))
             {
                 MessageBox.Show("Error! Please ensure that all fields are correctly entered");
-            } else if ((foreNameTxt.Text.Any(char.IsDigit)) || (surNameTxt.Text.Any(char.IsDigit))) 
+            }
+            else if ((foreNameTxt.Text.Any(char.IsDigit)) || (surNameTxt.Text.Any(char.IsDigit)))
             {
                 MessageBox.Show("Error! Please ensure that the names are correctly entered");
             }
             else if (!(numberTxt.Text.Length.Equals(11)) || !(numberTxt.Text.Take(4).All(char.IsDigit)) || !(numberTxt.Text.StartsWith("0")))
             {
                 MessageBox.Show("Error! Please ensure you have correctly entered your phone number");
-            } else
+            }
+            else
             {
                 newIndividual.Name = string.Concat(foreNameTxt.Text, " ", surNameTxt.Text);
                 newIndividual.PhoneNumber = numberTxt.Text;

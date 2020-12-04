@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+ * AUTHOR: Suparno Deb
+ * DATE LAST MODIFIED: 03/12/2020
+ * FULL NAME: ContactRecord.cs
+ * PURPOSE: Acts as a constructor for ContactRecord which is used to hold informations when a contact occurs between two individuals
+ * LAYER: Business
+ */
+using System;
 
 namespace OOSD
 {
-    class ContactRecord : Record
+    [Serializable]
+    /*
+     * Inherits from Record:
+     * Person - allows the access of type Person (which holds an ID, name and phone number)
+     * Date - the date & time of a particular incident 
+     */
+    public class ContactRecord : Record
     {
         private Person personTwo;
 
@@ -20,6 +29,7 @@ namespace OOSD
 
         }
 
+        // PROPERTY: Allows the access of type Person (which holds an ID, name and phone number)
         public Person PersonTwo
         {
             get { return personTwo; }
