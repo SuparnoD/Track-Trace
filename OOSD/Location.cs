@@ -1,7 +1,7 @@
 ﻿/*
  * AUTHOR: Suparno Deb
  * DATE LAST MODIFIED: 03/12/2020
- * FULL NAME: Location.cs
+ * FILE NAME: Location.cs
  * PURPOSE: Acts as a constructor for Location which is used to hold informations of a particular location
  * LAYER: Business
  */
@@ -41,7 +41,7 @@ namespace OOSD
             set { name = value; }
         }
 
-        // Returns the name of the location (for UI purposes) in the case this object is used to instantiate another object
+        // Returns the name of the location (for UI purposes) in the case this object is used to instantiate another object/variable
         public override string ToString()
         {
             return Name;

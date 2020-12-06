@@ -50,7 +50,7 @@ namespace OOSD
             set { phoneNumber = value; }
         }
 
-        // Returns the name of the individual (for UI purposes) in the case this object is used to instantiate another object
+        // Returns the name of the individual (for UI purposes) in the case this object is used to instantiate another object/variable
         public override string ToString()
         {
             return Name;

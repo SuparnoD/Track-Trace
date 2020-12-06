@@ -1,7 +1,7 @@
 ﻿/*
  * AUTHOR: Suparno Deb
  * DATE LAST MODIFIED: 03/12/2020
- * FULL NAME: ContactRecord.cs
+ * FILE NAME: ContactRecord.cs
  * PURPOSE: Acts as a constructor for ContactRecord which is used to hold informations when a contact occurs between two individuals
  * LAYER: Business
  */

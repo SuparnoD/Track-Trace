@@ -1,4 +1,11 @@
-﻿using System.Windows;
+﻿/*
+ * AUTHOR: Suparno Deb
+ * DATE LAST MODIFIED: 05/12/2020
+ * FILE NAME: MainWindow.xaml.cs
+ * PURPOSE: Handles events in response to the user's interaction with window 'MainWindow'
+ * LAYER: Presentation
+ */
+using System.Windows;
 
 namespace OOSD
 {
@@ -12,6 +19,7 @@ namespace OOSD
             InitializeComponent();
         }
 
+        // The 'Add Individual' button directs the user to go to the window 'AddIndividual'
         private void addPerson_Click(object sender, RoutedEventArgs e)
         {
             AddIndividual addPerson = new AddIndividual();
@@ -19,6 +27,7 @@ namespace OOSD
             this.Close();
         }
 
+        // The 'Database' button directs the user to go to the window 'Database'
         private void database_Click(object sender, RoutedEventArgs e)
         {
             Database personList = new Database();
@@ -26,6 +35,7 @@ namespace OOSD
             this.Close();
         }
 
+        // The 'Add Location' button directs the user to go to the window 'AddLocation'
         private void addLocation_Click(object sender, RoutedEventArgs e)
         {
             AddLocation addLocation = new AddLocation();
@@ -33,6 +43,7 @@ namespace OOSD
             this.Close();
         }
 
+        // The 'Record Visit' button directs the user to go to the window 'RecordVisit'
         private void recordVisit_Click(object sender, RoutedEventArgs e)
         {
             RecordVisit recordVisit = new RecordVisit();
@@ -40,6 +51,7 @@ namespace OOSD
             this.Close();
         }
 
+        // The 'Record Contact' button directs the user to go to the window 'Record Contact'
         private void recordContact_Click(object sender, RoutedEventArgs e)
         {
             RecordContact recordContact = new RecordContact();
