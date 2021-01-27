@@ -1,9 +1,9 @@
 ﻿/*
  * AUTHOR: Suparno Deb
- * DATE LAST MODIFIED: 03/12/2020
+ * DATE LAST MODIFIED: 09/12/2020
  * FILE NAME: DataSerializer.cs
  * PURPOSE: Holds the logic for all operations that persist data from lists onto an external file
- * LAYER: Data
+ * LAYER: Data Access
  */
 using System;
 using System.Collections.Generic;
@@ -20,15 +20,22 @@ namespace OOSD
         // Serializer for data that holds information of any contacts that occured between two individuals
         public static void contactSerializer(string filePath)
         {
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(filePath, true))
+            using (TextWriter ConTw = new StreamWriter(filePath))
             {
-                foreach (ContactRecord conRec in DataAccess.listOfContacts)
-                {
-                    // Properties and objects are separated by commas
-                    file.WriteLine(conRec.Person.ID + "," + conRec.Person.Name + "," + conRec.Person.PhoneNumber + ","
-                        + conRec.PersonTwo.ID + "," + conRec.PersonTwo.Name + "," + conRec.PersonTwo.PhoneNumber + ","
-                        + conRec.Date);
-                }
+                XmlSerializer contactSerializer = new XmlSerializer(typeof(List<ProxyContact>));
+                contactSerializer.Serialize(ConTw, DataAccess.proxyContact);
+            }
+
+            DataAccess.listOfLocations = null;
+        }
+
+        // Serializer for data that holds information of any visits that occured involving a location and a person
+        public static void visitSerializer(string filePath)
+        {
+            using(TextWriter visTw = new StreamWriter(filePath))
+            {
+                XmlSerializer visitSerializer = new XmlSerializer(typeof(List<ProxyVisit>));
+                visitSerializer.Serialize(visTw, DataAccess.proxyVisit);
             }
         }
 

@@ -1,31 +1,30 @@
 ﻿/*
  * AUTHOR: Suparno Deb
- * DATE LAST MODIFIED: 03/12/2020
- * FULL NAME: VisitRecord.cs
- * PURPOSE: Acts as a constructor for VisitRecord which is used to hold informations when an individual visits a particular location
- * LAYER: Business
+ * DATE LAST MODIFIED: 10/12/2020
+ * FILE NAME: Visit.cs
+ * PURPOSE: Acts as a constructor for Visit which is used to hold informations when an individual visits a particular location
+ * LAYER: Business Objecr
  */
 using System;
 using System.Runtime.Serialization;
 
 namespace OOSD
 {
-    [Serializable()]
     /*
     * Inherits from Record:
-    * Person - allows the access of type Person (which holds an ID, name and phone number)
+    * Person - allows the access of type Person (which holds an ID and phone number)
     * Date - the date & time of a particular incident 
     */
-    public class VisitRecord : Record
+    public class Visit : Record
     {
         private Location location;
 
-        public VisitRecord(Person person, Location location, DateTime date) : base(person, date)
+        public Visit(Person person, Location location, DateTime date) : base(person, date)
         {
             this.location = location;
         }
 
-        public VisitRecord()
+        public Visit()
         {
 
         }

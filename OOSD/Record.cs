@@ -1,9 +1,9 @@
 ﻿/*
  * AUTHOR: Suparno Deb
  * DATE LAST MODIFIED: 03/12/2020
- * FULL NAME: Record.cs
+ * FILE NAME: Record.cs
  * PURPOSE: Acts as a base class for any class dealing with holding records
- * LAYER: Business
+ * LAYER: Business Object
  */
 using System;
 

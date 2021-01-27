@@ -67,7 +67,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ContactRecord.cs" />
+    <Compile Include="Contact.cs" />
     <Compile Include="Database.xaml.cs">
       <DependentUpon>Database.xaml</DependentUpon>
     </Compile>
@@ -79,6 +79,8 @@
     <Compile Include="PeopleContacts.xaml.cs">
       <DependentUpon>PeopleContacts.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ProxyContact.cs" />
+    <Compile Include="ProxyVisit.cs" />
     <Compile Include="Record.cs" />
     <Compile Include="RecordContact.xaml.cs">
       <DependentUpon>RecordContact.xaml</DependentUpon>
@@ -86,7 +88,7 @@
     <Compile Include="RecordVisit.xaml.cs">
       <DependentUpon>RecordVisit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VisitRecord.cs" />
+    <Compile Include="Visit.cs" />
     <Page Include="AddIndividual.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

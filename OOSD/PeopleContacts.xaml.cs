@@ -1,6 +1,6 @@
 ﻿/*
  * AUTHOR: Suparno Deb
- * DATE LAST MODIFIED: 05/12/2020
+ * DATE LAST MODIFIED: 00/12/2020
  * FILE NAME: PeopleContact.xaml.cs
  * PURPOSE: Handles events in response to the user's interaction with window 'PeopleContact'
  * LAYER: Presentation
@@ -54,20 +54,20 @@ namespace OOSD
                     peopleListBox2.Items.Clear();
 
                     // Iterates through the listOfContacts list
-                    foreach (ContactRecord contactRec in DataAccess.listOfContacts)
+                    foreach (Contact contactRec in DataAccess.listOfContacts)
                     {
                         // Error handling/validation check: checks to see if the person selected in peopleListBox listbox is equal to the person stored in the contact records
-                        if (peopeListBox.SelectedItem.Equals(contactRec.Person))
+                        if (peopeListBox.SelectedItem.ToString().Equals(contactRec.Person.ToString()))
                         {
                             // Error handling/validation check: checks to see that the contact occured on or after the date/time value in the dateTextBox textbox
                             if (date.CompareTo(contactRec.Date) <= 0)
                             {
                                 /* All the retrieved data is the listed in the peopleListBox2 listbox in the format
-                                 * Name: {contactedPerson}
+                                 * ID: {contactedPerson}
                                  * Phone Number: {contactedPersonPhoneNumber}
                                  * Date of Contact: {dateOfContact}
                                  */
-                                peopleListBox2.Items.Add("Name: " + contactRec.PersonTwo.Name + Environment.NewLine
+                                peopleListBox2.Items.Add("ID: " + contactRec.PersonTwo.ID + Environment.NewLine
                                     + "Phone Number: " + contactRec.PersonTwo.PhoneNumber + Environment.NewLine
                                     + "Date of Contact: " + contactRec.Date);
                             }

@@ -1,6 +1,6 @@
 ﻿/*
  * AUTHOR: Suparno Deb
- * DATE LAST MODIFIED: 05/12/2020
+ * DATE LAST MODIFIED: 09/12/2020
  * FILE NAME: LocVisits.xaml.cs
  * PURPOSE: Handles events in response to the user's interaction with window 'LocVisits'
  * LAYER: Presentation
@@ -73,10 +73,10 @@ namespace OOSD
                     visitRecord.Items.Clear();
 
                     // Iterates through the listOfVisits list
-                    foreach (VisitRecord visitRec in DataAccess.listOfVisits)
+                    foreach (Visit visitRec in DataAccess.listOfVisits)
                     {
                         // Error handling/validation check: checks to see if the location selected in locList listbox is equal to the location stored in the visit records
-                        if (locList.SelectedItem.Equals(visitRec.Location))
+                        if (locList.SelectedItem.ToString().Equals(visitRec.Location.ToString()))
                         {
                             // Error handling/validation check: checks to see that the date/time value in date1 textbox is equal to or less than the date stored in visit records
                             if (dateOne.CompareTo(visitRec.Date) <= 0)
@@ -89,7 +89,7 @@ namespace OOSD
                                      * Phone Number: {personPhoneNumber}
                                      * Date of Visit: {visitDate}
                                      */
-                                    visitRecord.Items.Add("Name: " + visitRec.Person.Name + Environment.NewLine
+                                    visitRecord.Items.Add("ID: " + visitRec.Person.ID + Environment.NewLine
                                         + "Phone Number: " + visitRec.Person.PhoneNumber + Environment.NewLine
                                         + "Date of Visit: " + visitRec.Date);
                                 }

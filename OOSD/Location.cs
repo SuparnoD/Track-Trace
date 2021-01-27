@@ -3,7 +3,7 @@
  * DATE LAST MODIFIED: 03/12/2020
  * FILE NAME: Location.cs
  * PURPOSE: Acts as a constructor for Location which is used to hold informations of a particular location
- * LAYER: Business
+ * LAYER: Business Object
  */
 using System;
 using System.Runtime.Serialization;

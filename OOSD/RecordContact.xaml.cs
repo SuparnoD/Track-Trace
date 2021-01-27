@@ -1,6 +1,6 @@
 ﻿/*
  * AUTHOR: Suparno Deb
- * DATE LAST MODIFIED: 05/12/2020
+ * DATE LAST MODIFIED: 09/12/2020
  * FILE NAME: RecordContact.xaml.cs
  * PURPOSE: Handles events in response to the user's interaction with window 'RecordContact'
  * LAYER: Presentation
@@ -37,17 +37,17 @@ namespace OOSD
             {
                 try
                 {
-                    /* Two objects of type ContactRecord is recorded to record:
+                    /* Two objects of type Contact is created to record:
                      * personOne contacted personTwo on a particular date
                      * personTwo contacted personOne on the same date
                      */
 
-                    ContactRecord contactRec = new ContactRecord();
+                    Contact contactRec = new Contact();
                     contactRec.Person = (Person)peopleListBox.SelectedItem;
                     contactRec.PersonTwo = (Person)peopleListBox2.SelectedItem;
                     contactRec.Date = date;
 
-                    ContactRecord contactRecTwo = new ContactRecord();
+                    Contact contactRecTwo = new Contact();
                     contactRecTwo.Person = (Person)peopleListBox2.SelectedItem;
                     contactRecTwo.PersonTwo = (Person)peopleListBox.SelectedItem;
                     contactRecTwo.Date = date;
@@ -60,7 +60,7 @@ namespace OOSD
                     else
                     {
                         // Confirmation message to show that the contact between two individuals has been sucessfully registered
-                        MessageBox.Show(contactRec.Person.Name + " contacted " + contactRec.PersonTwo.Name + " on " + contactRec.Date);
+                        MessageBox.Show(contactRec.Person.ID + " contacted " + contactRec.PersonTwo.ID + " on " + contactRec.Date);
                         DataAccess.listOfContacts.Add(contactRec);
                         DataAccess.listOfContacts.Add(contactRecTwo);
                     }

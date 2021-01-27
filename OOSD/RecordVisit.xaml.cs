@@ -1,6 +1,6 @@
 ﻿/*
  * AUTHOR: Suparno Deb
- * DATE LAST MODIFIED: 05/12/2020
+ * DATE LAST MODIFIED: 09/12/2020
  * FILE NAME: RecordVisit.xaml.cs
  * PURPOSE: Handles events in response to the user's interaction with window 'RecordVisit'
  * LAYER: Presentation
@@ -49,8 +49,8 @@ namespace OOSD
             {
                 try
                 {
-                    // A new object of type VisitRecord is created to store the location, person details and date of visit
-                    VisitRecord visitRec = new VisitRecord();
+                    // A new object of type Visit is created to store the location, person details and date of visit
+                    Visit visitRec = new Visit();
                     visitRec.Location = (Location)locListBox.SelectedItem;
                     visitRec.Person = (Person)peopleListBox.SelectedItem;
                     visitRec.Date = date;
@@ -59,7 +59,7 @@ namespace OOSD
                     DataAccess.listOfVisits.Add(visitRec);
 
                     // Confirmation message to show that the visit has been sucessfully registered
-                    MessageBox.Show(visitRec.Person.Name + " visited " + visitRec.Location.Name + " on " + date);
+                    MessageBox.Show(visitRec.Person.ID + " visited " + visitRec.Location.Name + " on " + date);
                 }
                 catch
                 {

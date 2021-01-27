@@ -5,6 +5,7 @@
  * PURPOSE: Handles events in response to the user's interaction with window 'MainWindow'
  * LAYER: Presentation
  */
+using System;
 using System.Windows;
 
 namespace OOSD
@@ -57,6 +58,16 @@ namespace OOSD
             RecordContact recordContact = new RecordContact();
             recordContact.Show();
             this.Close();
+        }
+
+        private void listBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void listBox_SelectionChanged_1(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
