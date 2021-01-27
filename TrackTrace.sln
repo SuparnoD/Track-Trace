@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOSD", "OOSD\OOSD.csproj", "{FD36FAEC-7AC3-4D3E-97A4-172EB874C890}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackTrace", "OOSD\TrackTrace.csproj", "{FD36FAEC-7AC3-4D3E-97A4-172EB874C890}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOSDTests", "OOSDTests\OOSDTests.csproj", "{2D4AE087-7E3F-41A5-BDBE-449E7370403B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackTraceTests", "OOSDTests\TrackTraceTests.csproj", "{2D4AE087-7E3F-41A5-BDBE-449E7370403B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

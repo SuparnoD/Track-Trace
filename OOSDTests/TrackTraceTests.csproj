@@ -64,9 +64,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OOSD\OOSD.csproj">
+    <ProjectReference Include="..\OOSD\TrackTrace.csproj">
       <Project>{FD36FAEC-7AC3-4D3E-97A4-172EB874C890}</Project>
-      <Name>OOSD</Name>
+      <Name>TrackTrace</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
