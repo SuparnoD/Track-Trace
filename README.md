@@ -1,5 +1,7 @@
 # Track & Trace (T&T) System Prototype #
+- - - -
 The T&T system allows registration of users, each user will have an uniquely assigned ID and phone number.
+<br />
 The T&T allows registration of location.
 The T&T system records events that are associated with each user.
 
