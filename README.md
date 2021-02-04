@@ -10,4 +10,4 @@ Events fall into two types
 * A contact occurs when two users have come into contact. The system will record the date and time of the contact aswell as the two individuals involved
 * A visit occurs when a user checks in at a particular location. The system will record the user, the date and time of the visit aswell as the location.
 
-Data is recorded and saved onto local drive
+Data is recorded and saved onto local drive. Before running first time, alter the filePath (in OOSD/App.xaml.cs) to desired directory.
